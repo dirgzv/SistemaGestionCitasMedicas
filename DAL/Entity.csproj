@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7C068632-4DA0-4ED4-A6CB-305F5D31BFC4}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>SistemaGestionCitasMedicas</RootNamespace>
-    <AssemblyName>SistemaGestionCitasMedicas</AssemblyName>
+    <ProjectGuid>{DC00AB08-443E-40D2-91C2-F58DBDF957B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Entity</RootNamespace>
+    <AssemblyName>Entity</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,17 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="CitaMedica.cs" />
+    <Compile Include="Clinica.cs" />
+    <Compile Include="Diagnostico.cs" />
+    <Compile Include="EntidadSalud.cs" />
+    <Compile Include="Eps.cs" />
+    <Compile Include="ExamenFisico.cs" />
+    <Compile Include="FormulaMedica.cs" />
+    <Compile Include="HistoriaClinica.cs" />
+    <Compile Include="Horario.cs" />
+    <Compile Include="HorarioCitaMedica.cs" />
+    <Compile Include="HorarioMedico.cs" />
+    <Compile Include="Medico.cs" />
+    <Compile Include="Paciente.cs" />
+    <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="DAL\Entity.csproj">
-      <Project>{dc00ab08-443e-40d2-91c2-f58dbdf957b2}</Project>
-      <Name>Entity</Name>
-    </ProjectReference>
+    <Compile Include="SignosVitales.cs" />
+    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
